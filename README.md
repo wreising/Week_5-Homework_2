@@ -15,7 +15,7 @@ Command line utility to create a list of a team for Bootcamp Inc. consisting of 
 ---
 
 ## Table of Contents
-- [Instalation Instructions](#Installation Instructions)
+- Instalation Instructions (#Installation Instructions)
 - [Command to Use](#Command to use)
 - [Instructions](#Instructions)
 - [Contribution Guidlines](#Contribution Guidlines)
