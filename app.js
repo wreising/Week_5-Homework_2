@@ -156,6 +156,7 @@ function addIntern() {
 // send the array to the htmlRenderer.js
 function createTeamPage() {
   console.log(teamArray)
+  // send to the rencerer how? - need to watch more of the video
 }
 
 startTeam() // kick the whole thing off
