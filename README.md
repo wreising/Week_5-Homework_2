@@ -15,12 +15,12 @@ Command line utility to create a list of a team for Bootcamp Inc. consisting of 
 ---
 
 ## Table of Contents
-- Instalation Instructions (#Installation Instructions)
-- [Command to Use](#Command to use)
-- [Instructions](#Instructions)
-- [Contribution Guidlines](#Contribution Guidlines)
-- [Tests](#Tests)
-- [License](#License: BSD 3)
+- [Instalation Instructions] (#installation-nstructions)
+- [Command to Use](#command-to-use)
+- [Instructions](#instructions)
+- [Contribution Guidlines](#contribution-guidlines)
+- [Tests](#tests)
+- [License](#License-bsd-3)
 - [Questions](#Questions)
 
 ---
