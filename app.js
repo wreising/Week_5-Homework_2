@@ -5,6 +5,7 @@ const Intern = require("./lib/Intern")
 const inquirer = require("inquirer")
 const path = require("path") // ?
 const fs = require("fs")
+const fse = require('fs-extra')
 
 const OUTPUT_DIR = path.resolve(__dirname, "output") // ?
 const outputPath = path.join(OUTPUT_DIR, "team.html") // ?
@@ -41,13 +42,13 @@ function startTeam() {
   ])
     .then((managerData) => {
       console.log(managerData)
-      let newManager = new Manager(
+      let addManager = new Manager(
         managerData.managerName,
         managerData.managerId,
         managerData.managerEmail,
         managerData.managerOfficeNumber
       )
-      teamArray.push(newManager) // add manager to teamArray
+      teamArray.push(addManager) // add manager to teamArray
       console.log(teamArray)
       addTeamMembers() // move onto the main team building function
     })
@@ -55,23 +56,24 @@ function startTeam() {
 
 // add employees or interns to the team
 function addTeamMembers() {
+  console.log('\nAdd new Employees or Interns to your team:\n')
   inquirer.prompt([
     {
       type: 'list',
       name: 'employeeType',
-      message: 'What do you want to add?',
-      choices: ['Engineer', 'Intern', 'Finished building my Team'] // add an Engineer, and Intern, or be finished
+      message: 'What type of Employee do you want to add?',
+      choices: ['Engineer', 'Intern', 'I am finished building my Team'] // add an Engineer, and Intern, or be finished
     }
   ])
     .then((roleSelect) => {
-      switch (roleSelect.employeeType) {
+      switch (roleSelect.employeeType) { // switch case
         case 'Engineer':
           addEngineer() // go to add engineer
           break
         case 'Intern':
           addIntern() // go to add intern
           break
-        case 'Finished building my Team':
+        case 'I am finished building my Team':
           createTeamPage() // go to build the HTML page
       }
     })
@@ -79,36 +81,37 @@ function addTeamMembers() {
 
 // Add engineers
 function addEngineer() {
+  console.log('\nEnter Engineer information:\n')
   inquirer.prompt([
     {
       type: 'input',
       name: 'engineerName',
-      message: 'What is your name?'
+      message: 'What is their name?'
     },
     {
       type: 'input',
       name: 'engineerId',
-      message: 'What is your ID number?'
+      message: 'What is their ID number?'
     },
     {
       type: 'input',
       name: 'engineerEmail',
-      message: 'What is your email address?'
+      message: 'What is their email address?'
     },
     {
       type: 'input',
       name: 'engineerGithub',
-      message: 'What is your GitHub user name?'
+      message: 'What is their GitHub user name?'
     }
   ])
     .then((engineerData) => {
-      let newEngineer = new Engineer(
+      let addEngineer = new Engineer(
         engineerData.engineerName,
         engineerData.engineerId,
         engineerData.engineerEmail,
         engineerData.engineerGithub
       )
-      teamArray.push(newEngineer)
+      teamArray.push(addEngineer)
       console.log(engineerData)
       console.log(teamArray)
       addTeamMembers() // go back to add team members
@@ -117,36 +120,37 @@ function addEngineer() {
 
 // add intern
 function addIntern() {
+  console.log('\nEnter Intern information;\n')
   inquirer.prompt([
     {
       type: 'input',
       name: 'internName',
-      message: 'What is your name?'
+      message: 'What is their name?'
     },
     {
       type: 'input',
       name: 'internId',
-      message: 'What is your ID number?'
+      message: 'What is their ID number?'
     },
     {
       type: 'input',
       name: 'internEmail',
-      message: 'What is your email address?'
+      message: 'What is their email address?'
     },
     {
       type: 'input',
       name: 'internSchool',
-      message: 'What school to you attend?'
+      message: 'What school do they attend?',
     }
   ])
     .then((internData) => {
-      const intern = new Intern(
+      const addIntern = new Intern(
         internData.internName,
         internData.internId,
         internData.internEmail,
         internData.internSchool
       )
-      teamArray.push(intern)
+      teamArray.push(addIntern)
       console.log(internData)
       console.log(teamArray)
       addTeamMembers() // go back to add team member
@@ -155,9 +159,22 @@ function addIntern() {
 
 // send the array to the htmlRenderer.js
 function createTeamPage() {
+  console.log("\nwith your team finished, it's time to build the team WritableStreamDefaultWriter.\n")
+  let createTeamHTML = render(teamArray)
+  // fs-extra from Homework Walkthrough
+  // https://zoom.us/rec/share/klX9Y-L2B9ihz9i0BAlqcalxZcZ2cFNUDjO45Jw5dt2xq99IxRjMs0i4Fo3xGnRt.5dUIHXcT9J32YM3Z?startTime=1646822363000
+  fse.outputFile('output/bootcamp-team.html', createTeamHTML)
+    .then(() => {
+      console.log('The file has been saved!')
+    })
+    .catch(err => {
+      console.error(err)
+    })
   // should show the complete team array
   console.log(teamArray)
-  // send to the rencerer how? - need to watch more of the video
+
+  // send to the renderer how? - need to watch more of the video
+
 }
 
 startTeam() // kick the whole thing off
