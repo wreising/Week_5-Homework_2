@@ -1,6 +1,6 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+// const Manager = require("./lib/Manager");
+// const Engineer = require("./lib/Engineer");
+// const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -10,6 +10,41 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+function createEmployees() {
+  inquirer.prompt([
+    {
+      type: 'list',
+      name: 'employeeType',
+      message: 'What role do you play?',
+      choises: ['Manager', 'Engineer', 'Intern'],
+    },
+    {
+      type: 'input',
+      name: 'name',
+      message: 'What is your name?'
+    }
+    {
+      type: 'input',
+      name: 'id',
+      message: 'What is your ID number?'
+    }
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address?'
+    }
+    {
+      type: 'input',
+      name: 'github',
+      message: 'If you are an engineer, what is your GitHub user name?'
+    }
+    {
+      type: 'input',
+      name: 'school',
+      message: 'If you are an Intern, what school did you go to?'
+    }
+  ])
+}
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
