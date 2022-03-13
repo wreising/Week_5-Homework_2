@@ -41,7 +41,7 @@ Be polite and provide examples.
 
 ## Tests {#tests}
 
-running jest
+run jest `npm test`
 
 ## License: BSD 3 {#license}
 
