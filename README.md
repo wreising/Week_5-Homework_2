@@ -10,7 +10,7 @@ Command line utility to create a list of a team for Bootcamp Inc. consisting of 
 
 > **[Screencast](https://drive.google.com/file/d/1YgWA-ig94EaKYjz4AOZKsRsgg3G-IWt-/view)**
 
-![Screenshot](assets/screen_shot_2022-03-13.png)
+![Screenshot](Assets/screen_shot_2022-03-13.png)
 
 ---
 
