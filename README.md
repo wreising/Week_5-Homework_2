@@ -1,4 +1,4 @@
-# README - EE Summary [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+# README - Bootcamp Inc. Team Builder [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ### By: [Bill Reising](#questions)
 
@@ -8,7 +8,9 @@
 
 Command line utility to create a list of a team for Bootcamp Inc. consisting of a Manager and any number of Engineers and Interns. Once the team list has been created, generate a HTML page showing all members of the team by name with their ID number, email, and Office Number, GitHub username, or School as appropriate.
 
-> **NEED SCREENSHOT AND VIDEO**
+> **[Screencast](https://drive.google.com/file/d/1YgWA-ig94EaKYjz4AOZKsRsgg3G-IWt-/view)**
+
+> ![Screenshot](assets/screen_shot_2022-03-13.png)
 
 ---
 
