@@ -29,29 +29,29 @@ Command line utility to create a list of a team for Bootcamp Inc. consisting of 
 
 Copy the folder to a server running Node and that has inquirer, jest, fs, and path installed.
 
-## Command to use: {#command}
+## Command to use:
 
 <code>node app.js</code>
 
-## Instructions: {#instructions}
+## Instructions:
 
 run `node app.js` and answer the questions.
 
-## Contribution Guidlines {#contribution}
+## Contribution Guidlines
 
 Be polite and provide examples.
 
-## Tests {#tests}
+## Tests
 
 run jest `npm test`
 
-## License: BSD 3 {#license}
+## License: BSD 3
 
 >The BSD 3-clause license allows you almost unlimited freedom with the software so long as you include the BSD copyright and license notice in it (found in Fulltext). You may not use the names of the original company or its members to endorse derived products.
 
 ---
 
-## Questions: {#questions}
+## Questions:
 
 Find the source for this project and more on **[GitHub](https://github.com/wreising).**
 
