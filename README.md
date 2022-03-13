@@ -15,17 +15,17 @@ Command line utility to create a list of a team for Bootcamp Inc. consisting of 
 ---
 
 ## Table of Contents
-- [Instalation Instructions](#install)
-- [Command to Use](#command)
-- [Instructions](#instructions)
-- [Contribution Guidlines](#contribution)
-- [Tests](#tests)
-- [License](#license)
-- [Questions](#questions)
+- [Instalation Instructions](#Installation Instructions)
+- [Command to Use](#Command to use)
+- [Instructions](#Instructions)
+- [Contribution Guidlines](#Contribution Guidlines)
+- [Tests](#Tests)
+- [License](#License: BSD 3)
+- [Questions](#Questions)
 
 ---
 
-## Installation Instructions {#install}
+## Installation Instructions
 
 Copy the folder to a server running Node and that has inquirer, jest, fs, and path installed.
 
