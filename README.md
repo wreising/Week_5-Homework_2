@@ -1,4 +1,4 @@
-# README - EE Summary [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+# README - Bootcamp Inc. Team Builder[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ### By: [Bill Reising](#questions)
 
