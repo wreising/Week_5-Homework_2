@@ -41,7 +41,7 @@ function startTeam() {
     }
   ])
     .then((managerData) => {
-      console.log(managerData)
+      // console.log(managerData)
       let addManager = new Manager(
         managerData.managerName,
         managerData.managerId,
@@ -49,7 +49,7 @@ function startTeam() {
         managerData.managerOfficeNumber
       )
       teamArray.push(addManager) // add manager to teamArray
-      console.log(teamArray)
+      // console.log(teamArray)
       addTeamMembers() // move onto the main team building function
     })
 }
@@ -112,8 +112,8 @@ function addEngineer() {
         engineerData.engineerGithub
       )
       teamArray.push(addEngineer)
-      console.log(engineerData)
-      console.log(teamArray)
+      // console.log(engineerData)
+      // console.log(teamArray)
       addTeamMembers() // go back to add team members
     })
 }
@@ -151,8 +151,8 @@ function addIntern() {
         internData.internSchool
       )
       teamArray.push(addIntern)
-      console.log(internData)
-      console.log(teamArray)
+      // console.log(internData)
+      // console.log(teamArray)
       addTeamMembers() // go back to add team member
     })
 }
@@ -171,7 +171,7 @@ function createTeamPage() {
       console.error(err)
     })
   // should show the complete team array
-  console.log(teamArray)
+  // console.log(teamArray)
 
   // send to the renderer how? - need to watch more of the video
 
