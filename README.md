@@ -8,7 +8,11 @@
 
 Command line utility to create a list of a team for Bootcamp Inc. consisting of a Manager and any number of Engineers and Interns. Once the team list has been created, generate a HTML page showing all members of the team by name with their ID number, email, and Office Number, GitHub username, or School as appropriate.
 
+---
+
 > **[Screencast](https://drive.google.com/file/d/1YgWA-ig94EaKYjz4AOZKsRsgg3G-IWt-/view)**
+
+---
 
 ![Screenshot](Assets/screen_shot_2022-03-13.png)
 
